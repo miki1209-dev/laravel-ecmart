@@ -163,3 +163,15 @@ label {
 	letter-spacing: normal;
 	color: #191919;
 }
+
+.ecmart-favorite-add-cart {
+	border-radius: 2px;
+	color: #ffffff;
+	background-color: #0fbe9f;
+}
+
+.ecmart-favorite-item-delete {
+	border-radius: 2px;
+	color: #ffffff;
+	background-color: #e2001b;
+}

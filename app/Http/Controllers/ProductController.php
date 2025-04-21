@@ -76,7 +76,6 @@ class ProductController extends Controller
 	 */
 	public function show(Product $product)
 	{
-		// dump($product);
 		$reviews = $product->reviews()->get();
 		// dump($product);
 		// dump($reviews);
