@@ -56,14 +56,38 @@
 			<form action="{{ route('carts.destroy') }}" method="POST" class="d-flex justify-content-end mt-3">
 				@csrf
 				<input type="hidden" name="_method" value="DELETE">
-				<a href="" class="btn ecmart-favorite-button border-dark text-dark mr-3">
+				<a href="{{ route('top') }}" class="btn ecmart-favorite-button border-dark text-dark mr-3">
 					買い物を続ける
 				</a>
 				@if ($total > 0)
-					<button type="submit" class="btn ecmart-submit-button">購入を確定する</button>
+					<div class="btn ecmart-submit-button" data-bs-toggle="modal" data-bs-target="#buy-confirm-modal">
+						購入を確定する
+					</div>
 				@else
+					<div class="btn ecmart-submit-button disabled" data-bs-toggle="modal" data-bs-target="#buy-confirm-modal">
+						購入を確定する
+					</div>
 					<button type="submit" class="btn ecmart-submit-button disabled">購入を確定する</button>
 				@endif
+
+				<div id="buy-confirm-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+					role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 id="staticBackdropLabel" class="modal-title">購入を確定しますか？</h5>
+								<button type="button" class="close" data-bs-dismiss="modal" aria-label="閉じる">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn ecmart-favorite-button border-dark text-dark"
+									data-bs-dismiss="modal">閉じる</button>
+								<button type="submit" class="btn ecmart-submit-button">購入</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</form>
 
 		</div>

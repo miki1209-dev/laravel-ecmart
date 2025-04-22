@@ -18,8 +18,6 @@ class CartController extends Controller
 	{
 		$cart = Cart::instance(Auth::user()->id)->content();
 
-		dump($cart);
-
 		$total = 0;
 
 		foreach ($cart as $c) {
