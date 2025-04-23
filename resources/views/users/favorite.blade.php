@@ -6,12 +6,17 @@
 			<h1>お気に入り</h1>
 
 			<hr>
+
 			<div class="row">
 				@foreach ($favorite_products as $favorite_product)
 					<div class="col-md-7 mt-2">
 						<div class="d-inline-flex">
 							<a href="{{ route('products.show', $favorite_product->id) }}" class="w-25">
-								<img src="{{ asset('img/dummy.png') }}" class="img-fluid w-100">
+								@if ($favorite_product->image)
+									<img src="{{ asset($favorite_product->image) }}" class="img-fluid w-100">
+								@else
+									<img src="{{ asset('img/dummy.png') }}" class="img-fluid w-100">
+								@endif
 							</a>
 							<div class="container mt-3">
 								<h5 class="w-100 ecmart-favorite-item-text">{{ $favorite_product->name }}</h5>
@@ -30,13 +35,13 @@
 							@method('DELETE')
 						</form>
 					</div>
-					{{-- ここ追加 --}}
 					<div class="col-md-3 d-flex align-items-center justify-content-end">
 						<form action="{{ route('carts.store') }}" method="POST" class="m-3 align-items-end">
 							@csrf
 							<input type="hidden" name="id" value="{{ $favorite_product->id }}">
 							<input type="hidden" name="name" value="{{ $favorite_product->name }}">
 							<input type="hidden" name="price" value="{{ $favorite_product->price }}">
+							<input type="hidden" name="image" value="{{ $favorite_product->image }}">
 							<input type="hidden" name="qty" value="1">
 							<input type="hidden" name="weight" value="0">
 							<button type="submit" class="btn ecmart-favorite-add-cart">カートに入れる</button>

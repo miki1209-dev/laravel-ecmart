@@ -41,6 +41,9 @@ class CartController extends Controller
 			'qty' => $request->qty,
 			'price' => $request->price,
 			'weight' => $request->weight,
+			'options' => [
+				'image' => $request->image,
+			]
 		]);
 
 		return to_route('products.show', $request->get('id'));
