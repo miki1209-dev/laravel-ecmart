@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\MajorCategory;
 
 class WebController extends Controller
 {
 	public function index()
 	{
-		$categories = Category::all()->sortBy('major_category_name');
-		$major_category_names = Category::pluck('major_category_name')->unique();
+		$categories = Category::all();
+		$major_categories = MajorCategory::all();
 
-		return view('web.index', compact('categories', 'major_category_names'));
+		return view('web.index', compact('categories', 'major_categories'));
 	}
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\MajorCategory;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -19,21 +20,24 @@ class ProductController extends Controller
 		if ($request->input('category') !== null) {
 			$products = Product::where('category_id', $request->input('category'))->sortable()->paginate(16);
 			$total_count = Product::where('category_id', $request->input('category'))->count();
-			$category = Category::find($request->input('category'));
+			$category = Category::find($request->category);
+			$major_category = MajorCategory::find($category->major_category_id);
 		} else if ($keyword !== null) {
 			$products = Product::where('name', 'like', "%{$keyword}%")->sortable()->paginate(16);
 			$total_count = $products->total();
 			$category = null;
+			$major_category = null;
 		} else {
 			$products = Product::sortable()->paginate(16);
 			$total_count = '';
 			$category = null;
+			$major_category = null;
 		}
 		$categories = Category::all();
 		// dump($categories);
-		$major_category_names = Category::pluck('major_category_name')->unique();
-		// dump($major_category_names);
-		return view('products.index', compact('products', 'total_count', 'category', 'categories', 'major_category_names', 'keyword'));
+		$major_categories = MajorCategory::all();
+		// dump($major_categories);
+		return view('products.index', compact('products', 'category', 'major_category', 'categories', 'major_categories', 'total_count', 'keyword'));
 	}
 
 	/**
