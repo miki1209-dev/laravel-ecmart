@@ -86,4 +86,12 @@ class UserController extends Controller
 
 		return view('users.favorite', compact('favorite_products'));
 	}
+
+	public function destroy(Request $request)
+	{
+		/** @var \App\Models\User $user */
+		$user = Auth::user();
+		$user->delete();
+		return redirect('/');
+	}
 }
