@@ -47,6 +47,19 @@
 			<div class="offset-8 col-4">
 				<div class="row">
 					<div class="col-6">
+						<h2>送料</h2>
+					</div>
+					<div class="col-6">
+						<h2>￥{{ $carriage_cost }}</h2>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="offset-8 col-4">
+				<div class="row">
+					<div class="col-6">
 						<h2>合計</h2>
 					</div>
 					<div class="col-6">
@@ -64,22 +77,18 @@
 					買い物を続ける
 				</a>
 				@if ($total > 0)
-					<div class="btn ecmart-submit-button" data-bs-toggle="modal" data-bs-target="#buy-confirm-modal">
-						購入を確定する
-					</div>
+					<div class="btn ecmart-submit-button" data-bs-toggle="modal" data-bs-target="#buy-confirm-modal">購入を確定する</div>
 				@else
 					<div class="btn ecmart-submit-button disabled" data-bs-toggle="modal" data-bs-target="#buy-confirm-modal">
-						購入を確定する
-					</div>
-					<button type="submit" class="btn ecmart-submit-button disabled">購入を確定する</button>
+						購入を確定する</div>
 				@endif
 
-				<div id="buy-confirm-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+				<div class="modal fade" id="buy-confirm-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
 					role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 id="staticBackdropLabel" class="modal-title">購入を確定しますか？</h5>
+								<h5 class="modal-title" id="staticBackdropLabel">購入を確定しますか？</h5>
 								<button type="button" class="close" data-bs-dismiss="modal" aria-label="閉じる">
 									<span aria-hidden="true">&times;</span>
 								</button>
