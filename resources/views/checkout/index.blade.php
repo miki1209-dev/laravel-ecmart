@@ -1,10 +1,13 @@
 @extends('layouts.app')
+
 @section('content')
 	<div class="container pt-5">
 		<div class="row justify-content-center">
 			<div class="col-xl-9">
 				<h1 class="mb-5">ご注文内容</h1>
+
 				<h5 class="fw-bold mb-3">購入商品</h5>
+
 				<div class="row justify-content-between">
 					<div class="col-lg-7">
 						<hr class="mt-0 mb-4">
@@ -12,7 +15,7 @@
 						<div class="mb-5">
 							@if ($cart->isEmpty())
 								<div class="row">
-									<p class="mb-0">カートの中身は空です</p>
+									<p class="mb-0">カートの中身は空です。</p>
 								</div>
 							@else
 								@foreach ($cart as $product)
@@ -20,24 +23,22 @@
 										<div class="col-md-3">
 											<a href="{{ route('products.show', $product->id) }}">
 												@if ($product->options->image)
-													<img src="{{ asset($product->options->image) }}" class="img-thumbnail">
+													<img src="{{ asset($product->options->image) }}" class="img-thumbnail ecmart-product-img-cart">
 												@else
-													<img src="{{ asset('img/dummy.png') }}" class="img-thumbnail">
+													<img src="{{ asset('img/dummy.png') }}" class="img-thumbnail ecmart-product-img-cart">
 												@endif
 											</a>
 										</div>
 										<div class="col-md-9">
 											<div class="flex-column">
 												<p class="fs-5 mb-2">
-													<a href="{{ route('products.show', $product->id) }}"class="link-dark text-decoration-none">
-														{{ $product->name }}
-													</a>
+													<a href="{{ route('products.show', $product->id) }}" class="link-dark">{{ $product->name }}</a>
 												</p>
 												<div class="row mb-2">
-													<div class="col-xxl-3">
-														数量:{{ number_format($product->qty) }}
+													<div class="col-xxl-2">
+														数量：{{ number_format($product->qty) }}
 													</div>
-													<div class="col-xxl-9">
+													<div class="col-xxl-10">
 														合計：￥{{ number_format($product->qty * $product->price) }}
 													</div>
 												</div>
@@ -49,6 +50,7 @@
 						</div>
 
 						<h5 class="fw-bold mb-3">お届け先</h5>
+
 						<hr class="mb-4">
 
 						<div class="mb-5">
@@ -59,7 +61,7 @@
 						</div>
 					</div>
 					<div class="col col-xxl-4">
-						<div class="bg-white p-4 mb-4">
+						<div class="bg-light p-4 mb-4">
 							<div class="row mb-2">
 								<div class="col-md-5">
 									小計
@@ -83,7 +85,7 @@
 									<span class="fs-5 fw-bold">合計</span>
 								</div>
 								<div class="col-7 d-flex align-items-center">
-									<p class="fs-5 fw-bold">￥{{ number_format($total) }}<br><span class="small">（税込）</span></p>
+									<span class="fs-5 fw-bold">￥{{ number_format($total) }}</span><span class="small">（税込）</span>
 								</div>
 							</div>
 						</div>
@@ -92,10 +94,10 @@
 							@if ($total > 0)
 								<form action="{{ route('checkout.store') }}" method="POST">
 									@csrf
-									<button type="submit" class="btn ecmart-submit-button text-white w-100">お支払い</button>
+									<button type="submit" class="btn ecmart-submit-button text-white w-100">お支払い</a>
 								</form>
 							@else
-								<button class="btn ecmart-submit-button disabled w-100">お支払い</button>
+								<button class="btn ecmart-submit-button-disabled w-100">お支払い</button>
 							@endif
 						</div>
 					</div>

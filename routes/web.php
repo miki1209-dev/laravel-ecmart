@@ -9,6 +9,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +61,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 		Route::get('checkout', 'index')->name('checkout.index');
 		Route::post('checkout', 'store')->name('checkout.store');
 		Route::get('checkout/success', 'success')->name('checkout.success');
+	});
+
+	Route::controller(FaqController::class)->group(function () {
+		Route::get('faqs', 'index')->name('faqs.index');
 	});
 });

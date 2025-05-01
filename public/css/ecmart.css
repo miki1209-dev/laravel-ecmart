@@ -1,179 +1,227 @@
+html {
+  font-size: 14px;
+}
+
 body {
-	background-color: #f8fafc;
-	font-family: "メイリオ", "Meiryo", "Hiragino Kaku Gothic ProN",
-		"ヒラギノ角ゴ ProN W3", sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: 0.11px;
+  font-family: 'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.11px;
 }
 
 h1 {
-	font-size: 26px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: -0.13px;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.13px;
 }
 
 h2 {
-	font-size: 22px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 h3 {
-	font-size: 18px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: 0.04px;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.04px;
 }
 
 big {
-	font-size: 16px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: 0.08px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.08px;
 }
 
 caption {
-	font-size: 12px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: 0.08px;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.08px;
 }
 
 label {
-	font-size: 14px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #191919;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #191919;
+}
+
+a {
+  color: #0fbe9f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c997f;
+}
+
+header > nav {
+  padding: 12px 0 !important;
+}
+
+footer {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+}
+
+a img {
+  transition: 0.3s;
+}
+
+a img:hover {
+  opacity: 0.8;
+}
+
+.ecmart-wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 56px;
+  box-sizing: border-box;
 }
 
 .ecmart-login-input {
-	border-radius: 2px;
-	border: solid 1px #b2b2b2;
-	background-color: #ffffff;
+  border-radius: 2px;
+  border: solid 1px #b2b2b2;
+  background-color: #ffffff;
 }
 
 .ecmart-check-label {
-	font-size: 12px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
 }
 
 .ecmart-require-input-label {
-	border-radius: 1px;
-	background-color: #e2001b;
+  border-radius: 2px;
+  background-color: #e2001b;
+  padding: 0 6px;
 }
 
 .ecmart-require-input-label-text {
-	font-size: 14px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #ffffff;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
 }
 
 .ecmart-submit-button {
-	font-size: 14px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #ffffff;
-	background-color: #0fbe9f;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: #0fbe9f !important;
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
 }
 
-.ecmart-login-text {
-	font-size: 14px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #0fbe9f;
+.ecmart-submit-button:hover {
+  opacity: 0.8;
+}
+
+.ecmart-submit-button-disabled {
+  border-radius: 2px;
+  font-weight: bold;
+  pointer-events: none;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .ecmart-header-container {
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-	background-color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .ecmart-header-search-input {
-	border: solid 1px #e5e5e5;
+  border-radius: 2px;
+  border: solid 1px #e5e5e5;
 }
 
 .ecmart-header-search-button {
-	background-color: #0fbe9f;
+  border-radius: 2px;
+  background-color: #0fbe9f!important;
+  transition: 0.1s;
+}
+
+.ecmart-header-search-button:hover {
+  opacity: 0.8;
 }
 
 .ecmart-header-search-icon {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .ecmart-header-fav-icon {
-	color: #191919;
+  color: #191919;
 }
 
 .ecmart-header-shoppingcart-icon {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .ecmart-favorite-button {
   border-radius: 2px;
-  border: solid 1px #0fbe9f;
+  border: solid 1px #000000 !important;
   background-color: #ffffff;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
+}
+
+.ecmart-favorite-button:hover {
+  opacity: 0.8;
 }
 
 .text-favorite {
-  color: #0fbe9f;
+  color: #000000;
 }
 
 .ecmart-sidebar-category-label {
-	width: 156px;
-	height: 20px;
-	font-size: 13px;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #191919;
-}
-
-.ecmart-favorite-add-cart {
-	border-radius: 2px;
-	color: #ffffff;
-	background-color: #0fbe9f;
-}
-
-.ecmart-favorite-item-delete {
-	border-radius: 2px;
-	color: #ffffff;
-	background-color: #e2001b;
+    width: 156px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191919;
 }
 
 .review-score-color {
@@ -184,12 +232,194 @@ label {
   color: #0fbe9f;
 }
 
-.ecmart-delete-submit-button {
-  border-radius: 2px;
-  color: #ffffff;
-  background-color: #d94b0e;
+.review-score-blank-color {
+  color: #cccccc;
 }
 
-th, td {
-  background-color: #f8fafc !important;
+.ecmart-delete-submit-button {
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
 }
+
+.ecmart-delete-submit-button:hover {
+  opacity: 0.8;
+}
+
+.ecmart-product-img-detail {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.ecmart-product-img-recommend {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.ecmart-product-img-products {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.ecmart-product-img-cart {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+
+.ecmart-product-img-cart-history {
+  width: 90%;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .ecmart-product-img-detail {
+    margin-bottom: 18px;
+  }
+
+  .ecmart-product-img-recommend {
+    height: 300px;
+  }
+
+  .ecmart-product-img-products {
+    height: 300px;
+  }
+
+  .ecmart-product-img-cart {
+    height: 300px;
+    margin-bottom: 6px;
+  }
+
+  .ecmart-product-img-cart-history {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 12px;
+  }
+
+  .ecmart-vertical-bar {
+    display: none;
+  }
+}
+
+.page-item:first-child > .page-link,
+.page-item:last-child > .page-link {
+  border-radius: 2px;
+  background-color: #0fbe9f;
+  border-color: #0fbe9f;
+  color: #ffffff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: 0.1s;
+}
+
+.page-item:first-child>.page-link:hover,
+.page-item:last-child>.page-link:hover {
+  opacity: 0.8;
+}
+
+.page-item:first-child.disabled > .page-link,
+.page-item:last-child.disabled >.page-link {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2;
+}
+
+.page-item {
+  margin: 0 3px;
+}
+
+.page-item.active > .page-link {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2 !important;
+}
+
+.page-item:first-child {
+  margin: 0 3px 0 0;
+}
+
+.page-item:last-child {
+  margin: 0 0 0 3px;
+}
+
+.page-link {
+  border-radius: 2px;
+  color: #0fbe9f;
+}
+
+.page-link:hover {
+  color: #0c997f;
+}
+
+.page-link:focus {
+  color: #0c997f;
+}
+
+.active > .page-link {
+  background-color: #0fbe9f;
+  border-color: #0fbe9f;
+}
+
+.active > .page-link:hover {
+  color: #ffffff;
+}
+
+.pagination > .page-item:not(:first-child).page-item:not(:last-child).disabled > .page-link {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ecmart-form-parts {
+  border-radius: 2px;
+}
+
+.ecmart-mypage-link:hover {
+  transition: 0.3s;
+}
+
+.ecmart-mypage-link:hover {
+  background-color: #f8f9fa;
+}
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  color: #ccc; /* 背面の星（灰色） */
+}
+
+.star-rating::before,
+.star-rating::after {
+  content: "★★★★★";
+  letter-spacing: 0.1em;
+}
+
+.star-rating::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0fbe9f;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+/* ★幅の調整（0.5刻み） */
+.star-rating[data-rate="0.5"]::after { width: 10%; }
+.star-rating[data-rate="1"]::after { width: 20%; }
+.star-rating[data-rate="1.5"]::after { width: 30%; }
+.star-rating[data-rate="2"]::after { width: 40%; }
+.star-rating[data-rate="2.5"]::after { width: 50%; }
+.star-rating[data-rate="3"]::after { width: 60%; }
+.star-rating[data-rate="3.5"]::after { width: 70%; }
+.star-rating[data-rate="4"]::after { width: 80%; }
+.star-rating[data-rate="4.5"]::after { width: 90%; }
+.star-rating[data-rate="5"]::after { width: 100%; }
+

@@ -57,6 +57,6 @@ class CartController extends Controller
 			]
 		]);
 
-		return to_route('products.show', $request->get('id'));
+		return to_route('carts.index');
 	}
 }
