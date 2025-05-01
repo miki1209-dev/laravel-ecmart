@@ -62,8 +62,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 		Route::post('checkout', 'store')->name('checkout.store');
 		Route::get('checkout/success', 'success')->name('checkout.success');
 	});
+});
 
-	Route::controller(FaqController::class)->group(function () {
-		Route::get('faqs', 'index')->name('faqs.index');
-	});
+Route::controller(FaqController::class)->group(function () {
+	Route::get('faqs', 'index')->name('faqs.index');
 });

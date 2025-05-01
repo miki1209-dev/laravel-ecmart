@@ -25,7 +25,7 @@
 
 						<div class="col-md-7">
 							<input id="name" type="text" class="form-control @error('name') is-invalid @enderror ecmart-login-input"
-								name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">
+								name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="山田太郎">
 
 							@error('name')
 								<span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
 
 						<div class="col-md-7">
 							<input id="email" type="email" class="form-control @error('email') is-invalid @enderror ecmart-login-input"
-								name="email" value="{{ $user->email }}" required autocomplete="email" placeholder="samurai@samurai.com">
+								name="email" value="{{ $user->email }}" required autocomplete="email" placeholder="xxxx@xxxx.com">
 
 							@error('email')
 								<span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
 						<div class="col-md-7">
 							<input id="postal_code" type="text"
 								class="form-control @error('postal_code') is-invalid @enderror ecmart-login-input" name="postal_code"
-								value="{{ $user->postal_code }}" required autocomplete="postal_code" placeholder="150-0043">
+								value="{{ $user->postal_code }}" required autocomplete="postal_code" placeholder="000-0000">
 
 							@error('postal_code')
 								<span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
 						<div class="col-md-7">
 							<input id="address" type="text"
 								class="form-control @error('address') is-invalid @enderror ecmart-login-input" name="address"
-								value="{{ $user->address }}" required autocomplete="address" placeholder="東京都渋谷区道玄坂２丁目１１−１">
+								value="{{ $user->address }}" required autocomplete="address" placeholder="〇〇県〇〇市〇〇区〇〇町〇〇">
 
 							@error('address')
 								<span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
 
 						<div class="col-md-7">
 							<input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror ecmart-login-input"
-								name="phone" value="{{ $user->phone }}" required autocomplete="phone" placeholder="03-5790-9039">
+								name="phone" value="{{ $user->phone }}" required autocomplete="phone" placeholder="000-0000-0000">
 
 							@error('phone')
 								<span class="invalid-feedback" role="alert">
