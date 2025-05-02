@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
 	{
 		$user = new User();
 		$user->name = "テスト用ユーザー";
-		$user->email = "test@example.com";
+		$user->email = "testtest@example.com";
 		$user->email_verified_at = Carbon::now();
 		$user->password = Hash::make("testtest");
 		$user->postal_code = "0000000";
