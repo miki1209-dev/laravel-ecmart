@@ -18,13 +18,13 @@ class UserSeeder extends Seeder
 	public function run()
 	{
 		$user = new User();
-		$user->name = 'テスト用ユーザー';
-		$user->email = 'test@test.com';
+		$user->name = "テスト用ユーザー";
+		$user->email = "test@example.com";
 		$user->email_verified_at = Carbon::now();
-		$user->password = Hash::make('testtest');
-		$user->postal_code = '0000000';
-		$user->address = 'テスト県テスト市テスト区テスト町1-1';
-		$user->phone = '000-0000-0000';
+		$user->password = Hash::make("testtest");
+		$user->postal_code = "0000000";
+		$user->address = "テスト県テスト市テスト区テスト町1-1";
+		$user->phone = "000-0000-0000";
 		$user->save();
 	}
 }
