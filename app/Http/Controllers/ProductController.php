@@ -99,7 +99,7 @@ class ProductController extends Controller
 	{
 		$reviews = $product->reviews()->paginate(5);
 		// dump($product);
-		// dump($reviews);
+		dump($reviews);
 		return view('products.show', compact('product', 'reviews'));
 	}
 
